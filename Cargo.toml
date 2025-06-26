@@ -1,7 +1,19 @@
 [package]
-name = "lineup_sway_screens"
-version = "0.1.0"
+authors = ["Hans Ellegård <psyill.net@gmail.com>"]
+categories = []
+description = "Utility for lining up Sway output screens side by side."
 edition = "2024"
+keywords = ["sway"]
+license = "Apache-2.0"
+name = "lineup_sway_screens"
+publish = false
+repository = "https://github.com/psyill/lineup_sway_screens"
+version = "0.1.0"
 
 [dependencies]
 swayipc = "3.0.3"
+
+[profile.release]
+lto = true
+opt-level = "z"
+strip = true
